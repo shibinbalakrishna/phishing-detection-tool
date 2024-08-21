@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web scraping</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="icon" type="favicon" href="static/images/cv_favicon.png">
+</head>
+<body style="background-color: black;">
+    
+    <h1 style="color: rgb(39, 117, 243);">Web content info</h1>
+    
+    <form action="/scrape" method="POST">
+        <label style="color: brown;" for="url" >Enter  URL: </label>
+        <span id="password-input">[ <input type="text" name="url"   style="background-color: black; border-color: black; color: chartreuse; border-style: none; " autofocus /> ]</span>
+        <br>
+        <input type="submit" value="Enter" style="background-color: rgb(66, 46, 5); margin-left: 100px; margin-top: 10px;">
+    </form>
+    
+    {% if links %}
+        <h2>Links:</h2>
+        <ul>
+            {% for link in links %}
+                <li>{{ link }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

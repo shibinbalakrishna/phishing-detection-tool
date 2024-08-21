@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="icon" type="favicon" href="static/images/cv_favicon.png">
+        <!-- bootstrap  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+        <link rel="manifest" href="static/site.webmanifest">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&amp;family=Fredericka+the+Great&amp;family=Merriweather:ital@1&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&amp;display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/fc48d5c4b4.js"></script><link href="https://use.fontawesome.com/fc48d5c4b4.css" media="all" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+        <style>
+            
+            
+        </style>
+    </head>
+    <body id="bootstrap"><nav id="navbar" class="navbar fixed-top navbar-expand-lg ">
+        <img id="icon" type="logo.png" src="static/images/ph3.jpg">        
+        <a class="navbar-brand" href="/"><strong>Website Analysis</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item  " style="margin-left: 1rem;">
+                    
+                    <a class="nav-link inactive" href="/">Home</a>
+                </li>
+                
+                
+            <!-- </ul>
+            
+            <ul class="navbar-nav ml-auto" > -->
+                <li class="nav-item  ">
+                    
+                    <a class="nav-link inactive" href="/aboutus">AboutUs</a>
+                </li>
+                
+                    <li class="nav-item ">
+                        
+                        <a class="nav-link inactive" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        
+                        <a class="nav-link active" href="/register">Register</a>
+                    </li>
+                
+            </ul>  
+        </div>
+    </nav>
+    
+        <div class="container-fluid"> 
+            <div class="row" style="margin-right: 0;margin-left: 0;">
+                <div class="col-12 col-md-7 mb-3">
+                    <img style="margin-top: 1rem;width: 100%;" src="static//images/register_img.png" alt="Healthcare" srcset="">
+                            
+                </div>
+                <div class="col-12 col-md-5">
+                    
+                <!-- <div class="col-sm-12 col-md-12 col-lg-12" > -->
+                    <form class="login-form" action="/login" method="get">
+                        <div class="form-group col-12">
+                            <h3 class="col-12"><strong style="color: #0067d5;">Register</strong></h3><hr>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+                                </div>
+                                <input type="text" name="firstName" class="form-control" placeholder="Enter name" id="firstName" required="">
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-envelope text-muted"></i>
+                                    </span>
+                                </div>
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required="">
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class="input-group col-lg-12 mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-lock text-muted"></i>
+                                    </span>
+                                </div>
+                                <input type="password" name="password" class="form-control" placeholder="Enter password" id="password" required="">
+                            </div>
+                        </div>
+                        
+                         
+                        <div class="form-group col-12" style="margin-top: 2rem;">
+                            <div class="input-group col-lg-12 mb-4">
+                                <button style="width: 100%;" class=" btn btn-primary" type="submit">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer pl-4 pb-4">
+                            Already registered? <a href="/login" class="text-primary ml-2">Login</a>
+                        </footer>
+                        
+                    </form>
+                            
+                </div>
+            </div>
+        </div>
+        <script>
+            var check = function() {
+                if (document.getElementById('password').value == document.getElementById('confirmPassword').value) {
+                    document.getElementById('message').style.color = 'green';
+                    document.getElementById('message').innerHTML = 'matching';
+                } else {
+                    document.getElementById('message').style.color = 'red';
+                    document.getElementById('message').innerHTML = 'not matching';
+                }
+            }
+            
+        </script>
+    
+    
+    
+    <footer>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+          .kilimanjaro_area {
+              position: relative;
+              z-index: 1;
+              margin-top: 20px;
+              }
+              .foo_top_header_one {
+              background-color: #15151e;
+              color: #fff;
+          }
+          .section_padding_100_70 {
+              padding-top: 50px;
+              padding-bottom: 10px;
+          }
+          .foo_top_header_one {
+              color: #fff;
+          }
+          .kilimanjaro_part {
+              margin-bottom: 30px;
+          }
+          .foo_top_header_one .kilimanjaro_part > h5 {
+              color: #fff;
+          }
+          .kilimanjaro_part h4, .kilimanjaro_part h5 {
+              margin-bottom: 30px;
+          }
+
+          .kilimanjaro_single_contact_info {
+              margin-bottom: 10px;
+          }
+
+          .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+              color: rgba(255,255,255,.5);
+          }
+          p, ul li, ol li {
+              font-weight: 300;
+          }
+          ul {
+              margin: 0;
+              padding: 0;
+          }
+          .kilimanjaro_bottom_header_one {
+              background-color: #111;
+          }
+          .section_padding_50 {
+              padding: 15px 0;
+          }
+          .kilimanjaro_bottom_header_one p {
+              color: #fff;
+              margin: 0;
+          }
+          p, ul li, ol li {
+              font-weight: 300;
+          }
+          .kilimanjaro_bottom_header_one a {
+              color: inherit;
+              font-size: 14px;
+          }
+          a, h1, h2,h3 , h4, h5, h6 {
+              font-weight: 400;
+          }
+          .m-top-15 {
+              margin-top: 15px;
+          }
+          ul {
+              margin: 0;
+              padding: 0;
+          }
+      
+          .kilimanjaro_widget > li {
+              display: inline-block;
+          }
+          p, ul li, ol li {
+              font-weight: 300;
+          }
+          ol li, ul li {
+              list-style: outside none none;
+          }
+          .kilimanjaro_widget a {
+              border: 1px solid #333;
+              border-radius: 6px;
+              color: #888;
+              display: inline-block;
+              font-size: 13px;
+              margin-bottom: 4px;
+              padding: 7px 12px;
+          }
+          ul {
+              margin: 0;
+              padding: 0;
+          }
+          .kilimanjaro_links a {
+              border-bottom: 1px solid #333;
+              color: rgba(255,255,255,.5);
+              display: block;
+              font-size: 13px;
+              margin-bottom: 5px;
+              padding-bottom: 10px;
+          }
+          .kilimanjaro_links a {
+              color: rgba(255,255,255,.5);
+              font-size: 13px;
+          }
+          top-15 {
+              margin-top: 15px;
+          }
+          .foo_top_header_one .kilimanjaro_part > h5 {
+              color: #fff;
+          }
+          .kilimanjaro_part h4, .kilimanjaro_part h5 {
+              margin-bottom: 10px;
+          }
+          .kilimanjaro_social_links > li {
+              display: inline-block;
+          }
+          p, ul li, ol li {
+              font-weight: 300;
+          }
+          .kilimanjaro_social_links a {
+              border: 1px solid #333;
+              border-radius: 6px;
+              color: #888;
+              display: inline-block;
+              font-size: 13px;
+              margin-bottom: 3px;
+              padding: 7px 12px;
+          }
+          .kilimanjaro_blog_area .kilimanjaro_date {
+              color: #27ae60;
+              font-size: 13px;
+              margin-bottom: 5px;
+          }
+          .kilimanjaro_blog_area > p {
+              color: rgba(255,255,255,.5);
+              line-height: 1.3;
+              margin-bottom: 0;
+          }
+          .kilimanjaro_works > a {
+              display: inline-block;
+              /* float: left; */
+              position: relative;
+              width: 33.33333333%;
+              z-index: 1;
+          }
+          .kilimanjaro_thumb {
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 75px;
+          }
+          .kilimanjaro_links a i {
+              padding-right: 10px;
+          }
+          /* :: 18.0 Footer Area CSS */
+      
+              .footer_area {
+                  position: relative;
+                  z-index: 1;
+              }
+          .footer_bottom p > i,
+              .footer_bottom p > a:hover {
+                  color: #27ae60;
+              }	
+      
+              .social_links_area {
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                  padding: 50px 0 30px 0;
+                  text-align: center;
+                  position: relative;
+                  z-index: 1;
+              }
+          .social_links_area > a:hover {
+                  color: #27ae60;
+              }
+      
+              .inline-style .social_links_area > a:hover {
+                  background-color: transparent;
+                  color: #27ae60;
+                  border: 0px solid transparent;
+              }
+          .single_feature:hover .feature_text h4 {
+                  color: #27ae60;
+              }
+          .kilimanjaro_blog_area {
+              border-bottom: 1px solid #333;
+              margin-bottom: 15px;
+              padding: 0 0 15px 90px;
+              position: relative;
+              z-index: 1;
+          }
+          .kilimanjaro_links a {
+              border-bottom: 1px solid #333;
+              color: rgba(255,255,255,.5);
+              display: block;
+              font-size: 13px;
+              margin-bottom: 5px;
+              padding-bottom: 10px;
+          }
+        </style>
+        <div class="kilimanjaro_area">
+
+                    <!-- Top Footer Area Start -->
+              <div class="foo_top_header_one section_padding_100_70">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-12 col-md-6 col-lg-4">
+                              <div class="kilimanjaro_part">
+                                  <h5>About Us</h5>
+                                  <p>We are students of cyber security stream. 
+                                    we are working on the project since 12 march 2023. 
+                                    We contributed our skills our knowledge on this.</p>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-4" style="margin-left: 30%;">
+          
+                              <div class="kilimanjaro_part">
+                                  <h5>Important Links</h5>
+                                  <ul class="kilimanjaro_links">
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms &amp; Conditions</a></li>
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About Licences</a></li>
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help &amp; Support</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+
+
+          <!-- Footer Bottom Area Start -->
+          <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <p>© All the best</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+      </footer>
+      </body>
+</html>

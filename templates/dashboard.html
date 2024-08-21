@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="favicon" href="static/images/cv_favicon.png">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static//favicon-16x16.png">
+    <link rel="manifest" href="static/site.webmanifest">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Fredericka+the+Great&family=Merriweather:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fc48d5c4b4.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link href="static/css/style.css" rel="stylesheet">
+    <title>URL detection</title>
+
+ </head>
+<body>
+    <body id="bootstrap"><nav id="navbar" class="navbar fixed-top navbar-expand-lg">
+        <img id="icon" type="logo.png" src="static/images/logo.png">
+        
+        <a class="navbar-brand" href="/"><strong>Website Analysis</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item  " style="margin-left: 1rem;">
+                    
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                
+                
+            <!-- </ul>
+            
+            <ul class="navbar-nav ml-auto" > -->
+                <li class="nav-item  ">
+                    
+                    <a class="nav-link inactive" href="/aboutus">AboutUs</a>
+                </li>
+                
+                    
+                    <li class="nav-item ">
+                        
+                        <a class="nav-link inactive" href="/index2">LookUp</a>
+                    </li>
+                    <li class="nav-item ">
+                        
+                        <a class="nav-link inactive" href="/blacklist">Blacklist</a>
+                    </li>
+                
+            </ul>  
+        </div>
+     </nav>
+
+    
+
+<center>
+
+
+  <img src="static/images/back.png">
+
+        <form action="/predict" method ="post" class="form-group" >
+            <input type="text" class="form-control" style="text-align: center; font-size: 25px;" name ='url' id="url" placeholder="Enter URL" required="" />
+            <br>
+            <button class="button" role="button" style="font-size: 30px;" >Analyze URL</button>
+        </form>
+            <br>
+    <h3  style="width: 80%;"><a href= {{ url }} target="_blank">{{ url }}</a></h3>
+       
+    <br>
+    <img id="img2" style="display: none;" src="static/images/fraud.png" width="200" height="200">
+    <img id="img1" style="display: none;" src="static/images/safe.png" width="200" height="200">
+
+    <h2 id="prediction" style="color: green;"></h2>
+    <h2 id="prediction1" style="color: red;"></h2>
+    <br>
+
+    <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" style="color: white; font-size: 25px;">Still want to Continue</button>
+
+    <button class="button1" id="button1" role="button" style="color: white; font-size: 25px"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+
+
+    </center>
+
+</div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    
+    <script>
+        
+            let x = '{{xx}}';
+            let num = x*100;
+            if (0<=x && x<0.50){
+                num = 100-num;
+            }
+            let txtx = num.toString();
+            if(x<=1 && x>=0.50){
+                var label = "Website is "+txtx +"% safe to use...";
+                document.getElementById("prediction").innerHTML = label;
+                document.getElementById("button1").style.display="block";
+                document.getElementById("img1").style.display="block";
+
+            }
+            else if (0<=x && x<0.50){
+                var label = "Website is "+txtx +"% unsafe to use..."
+                document.getElementById("prediction1").innerHTML = label ;
+                document.getElementById("button2").style.display="block";
+                document.getElementById("img2").style.display="block";
+
+            }
+        
+    </script>
+    
+
+
+
+
+        <section class="text-gray-600 body-font">
+            
+          </div></section>
+    
+    
+          <footer>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style>
+              .kilimanjaro_area {
+                  position: relative;
+                  z-index: 1;
+                  margin-top: 20px;
+                  }
+                  .foo_top_header_one {
+                  background-color: #15151e;
+                  color: #fff;
+              }
+              .section_padding_100_70 {
+                  padding-top: 50px;
+                  padding-bottom: 10px;
+              }
+              .foo_top_header_one {
+                  color: #fff;
+              }
+              .kilimanjaro_part {
+                  margin-bottom: 30px;
+              }
+              .foo_top_header_one .kilimanjaro_part > h5 {
+                  color: #fff;
+              }
+              .kilimanjaro_part h4, .kilimanjaro_part h5 {
+                  margin-bottom: 30px;
+              }
+
+              .kilimanjaro_single_contact_info {
+                  margin-bottom: 10px;
+              }
+
+              .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+                  color: rgba(255,255,255,.5);
+              }
+              p, ul li, ol li {
+                  font-weight: 300;
+              }
+              ul {
+                  margin: 0;
+                  padding: 0;
+              }
+              .kilimanjaro_bottom_header_one {
+                  background-color: #111;
+              }
+              .section_padding_50 {
+                  padding: 15px 0;
+              }
+              .kilimanjaro_bottom_header_one p {
+                  color: #fff;
+                  margin: 0;
+              }
+              p, ul li, ol li {
+                  font-weight: 300;
+              }
+              .kilimanjaro_bottom_header_one a {
+                  color: inherit;
+                  font-size: 14px;
+              }
+              a, h1, h2,h3 , h4, h5, h6 {
+                  font-weight: 400;
+              }
+              .m-top-15 {
+                  margin-top: 15px;
+              }
+              ul {
+                  margin: 0;
+                  padding: 0;
+              }
+          
+              .kilimanjaro_widget > li {
+                  display: inline-block;
+              }
+              p, ul li, ol li {
+                  font-weight: 300;
+              }
+              ol li, ul li {
+                  list-style: outside none none;
+              }
+              .kilimanjaro_widget a {
+                  border: 1px solid #333;
+                  border-radius: 6px;
+                  color: #888;
+                  display: inline-block;
+                  font-size: 13px;
+                  margin-bottom: 4px;
+                  padding: 7px 12px;
+              }
+              ul {
+                  margin: 0;
+                  padding: 0;
+              }
+              .kilimanjaro_links a {
+                  border-bottom: 1px solid #333;
+                  color: rgba(255,255,255,.5);
+                  display: block;
+                  font-size: 13px;
+                  margin-bottom: 5px;
+                  padding-bottom: 10px;
+              }
+              .kilimanjaro_links a {
+                  color: rgba(255,255,255,.5);
+                  font-size: 13px;
+              }
+              top-15 {
+                  margin-top: 15px;
+              }
+              .foo_top_header_one .kilimanjaro_part > h5 {
+                  color: #fff;
+              }
+              .kilimanjaro_part h4, .kilimanjaro_part h5 {
+                  margin-bottom: 10px;
+              }
+              .kilimanjaro_social_links > li {
+                  display: inline-block;
+              }
+              p, ul li, ol li {
+                  font-weight: 300;
+              }
+              .kilimanjaro_social_links a {
+                  border: 1px solid #333;
+                  border-radius: 6px;
+                  color: #888;
+                  display: inline-block;
+                  font-size: 13px;
+                  margin-bottom: 3px;
+                  padding: 7px 12px;
+              }
+              .kilimanjaro_blog_area .kilimanjaro_date {
+                  color: #27ae60;
+                  font-size: 13px;
+                  margin-bottom: 5px;
+              }
+              .kilimanjaro_blog_area > p {
+                  color: rgba(255,255,255,.5);
+                  line-height: 1.3;
+                  margin-bottom: 0;
+              }
+              .kilimanjaro_works > a {
+                  display: inline-block;
+                  /* float: left; */
+                  position: relative;
+                  width: 33.33333333%;
+                  z-index: 1;
+              }
+              .kilimanjaro_thumb {
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 75px;
+              }
+              .kilimanjaro_links a i {
+                  padding-right: 10px;
+              }
+              /* :: 18.0 Footer Area CSS */
+          
+                  .footer_area {
+                      position: relative;
+                      z-index: 1;
+                  }
+              .footer_bottom p > i,
+                  .footer_bottom p > a:hover {
+                      color: #27ae60;
+                  }	
+          
+                  .social_links_area {
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      padding: 50px 0 30px 0;
+                      text-align: center;
+                      position: relative;
+                      z-index: 1;
+                  }
+              .social_links_area > a:hover {
+                      color: #27ae60;
+                  }
+          
+                  .inline-style .social_links_area > a:hover {
+                      background-color: transparent;
+                      color: #27ae60;
+                      border: 0px solid transparent;
+                  }
+              .single_feature:hover .feature_text h4 {
+                      color: #27ae60;
+                  }
+              .kilimanjaro_blog_area {
+                  border-bottom: 1px solid #333;
+                  margin-bottom: 15px;
+                  padding: 0 0 15px 90px;
+                  position: relative;
+                  z-index: 1;
+              }
+              .kilimanjaro_links a {
+                  border-bottom: 1px solid #333;
+                  color: rgba(255,255,255,.5);
+                  display: block;
+                  font-size: 13px;
+                  margin-bottom: 5px;
+                  padding-bottom: 10px;
+              }
+            </style>
+            <div class="kilimanjaro_area">
+                    <!-- Top Footer Area Start -->
+              <div class="foo_top_header_one section_padding_100_70">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-12 col-md-6 col-lg-4">
+                              <div class="kilimanjaro_part">
+                                  <h5>About Us</h5>
+                                  <p>We are students of cyber security stream. 
+                                    we are working on the project since 12 march 2023. 
+                                    We contributed our skills our knowledge on this.</p>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-4" style="margin-left: 30%;">
+          
+                              <div class="kilimanjaro_part">
+                                  <h5>Important Links</h5>
+                                  <ul class="kilimanjaro_links">
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms &amp; Conditions</a></li>
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About Licences</a></li>
+                                      <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help &amp; Support</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+
+          
+          
+          
+
+
+              <!-- Footer Bottom Area Start -->
+              <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-12">
+                              <p>© All the best</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <script>
+                window.addEventListener("scroll", function() {
+                  let navArea = document.getElementById("navbar");
+                  
+                  
+                  if (window.pageYOffset > 16) {
+                      
+                      navArea.classList.add("is-sticky");
+                  } else {
+                      console.log(window.pageYOffset);
+                      console.log("window.pageYOffset");
+                      navArea.classList.remove("is-sticky");
+                  }
+              });
+            </script>
+          </footer>
+    
+    
+    </body>
+</html>
